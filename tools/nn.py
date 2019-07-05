@@ -11,7 +11,7 @@ class Classifier:
 
         self.optimizer = torch.optim.Adam(train_params, lr=learning_rate)
     
-    def train(self, train_data, test_data, epochs, to_file='model') -> (dict, list, list):
+    def train(self, train_data, test_data, epochs, to_file='model'):
         """Train and validate classifier on given data
 
         Params:
@@ -62,7 +62,7 @@ class Classifier:
         - data : test dataloader
         Return:
         - test running loss
-        - avarage accuracy
+        - average accuracy
         """
         loss = .0
         accuracy = .0
