@@ -8,7 +8,6 @@ class Classifier:
         self.criterion = torch.nn.NLLLoss()
 
         train_params = self.model.parameters()
-
         self.optimizer = torch.optim.Adam(train_params, lr=learning_rate)
     
     def train(self, train_data, test_data, epochs, to_file='model'):
